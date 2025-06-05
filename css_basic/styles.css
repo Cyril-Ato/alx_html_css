@@ -1,35 +1,81 @@
-/* Set the body as a vertical flex container to organize its direct children */
 body {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
 }
 
-/* Configure the main element to use horizontal flex layout */
 main {
-    display: flex;
-    flex-direction: row;
-    flex: 1 1 auto;
+  display: flex;
+  flex-direction: row;
+  flex: auto;
 }
 
-/* Style the article section to take two parts of available space with vertical scrolling */
 article {
-    flex: 2 1 0%;
-    overflow-y: auto;
-    padding: 16px;
+  flex: 2;
+  overflow-y: auto;
+  padding: 1rem;
+  background-color: #ffffff;
 }
 
-/* Style the aside section to take one part of available space with vertical scrolling */
 aside {
-    flex: 1 1 0%;
-    overflow-y: auto;
-    padding: 16px;
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  background-color: #e6e6e6;
 }
 
-/* Provide spacing and background color for header and footer elements */
 header,
 footer {
-    padding: 16px;
-    background-color: #f0f0f0;
+  padding: 1rem;
+  background-color: #003366;
+  color: white;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+header nav ul li {
+  margin-right: 1.5rem;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+footer p {
+  margin: 0;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+table th,
+table td {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+table th {
+  background-color: #f0f0f0;
 }
