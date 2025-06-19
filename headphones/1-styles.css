@@ -138,7 +138,7 @@ body {
 
 @media screen and (max-width: 480px) {
   .header {
-    background-image: url('headphones_hero_2.jpg');
+    background-image: url('images/headphones_hero_2.jpg');
   }
 
   .nav-links {
