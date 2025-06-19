@@ -1,0 +1,284 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+.header {
+  background-image: url('images/headphones_hero_1.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 40px 0 100px;
+  text-align: center;
+  position: relative;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 30px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.menu-icon {
+  display: none;
+  height: 20px;
+  margin-left: 20px;
+}
+
+
+.hero h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.hero button {
+  background-color: #FF6565;
+  border: none;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.hero button:hover,
+.hero button:active {
+  opacity: 0.9;
+}
+
+
+.services {
+  background-color: #fff;
+  color: #071629;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.services h2 {
+  font-size: 32px;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+
+.icon-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.icon-card {
+  max-width: 200px;
+  padding: 20px;
+}
+
+.icon {
+  font-size: 50px;
+  color: #FF6565;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.icon-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.icon-card p {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+}
+
+
+.results {
+  background-color: #071629;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.results h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.results p {
+  max-width: 700px;
+  margin: 0 auto 60px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.stat {
+  width: 180px;
+}
+
+.stat h3 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #FF6565;
+  margin-bottom: 10px;
+}
+
+.stat p {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+
+@media screen and (max-width: 768px) {
+  .icon-cards,
+  .stats {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    background-image: url('images/headphones_hero_2.jpg');
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero button {
+    font-size: 14px;
+    padding: 12px 24px;
+  }
+}
+.contact {
+  background-color: #ffffff;
+  color: #071629;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.contact h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.contact p {
+  margin-bottom: 40px;
+  font-size: 16px;
+  color: #333;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+  resize: vertical;
+}
+
+.contact-form button {
+  background-color: #FF6565;
+  color: white;
+  border: none;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: opacity 0.3s ease;
+}
+
+.contact-form button:hover,
+.contact-form button:active {
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 480px) {
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 13px;
+  }
+
+  .contact-form button {
+    font-size: 14px;
+  }
+}
