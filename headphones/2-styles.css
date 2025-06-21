@@ -6,10 +6,10 @@
 }
 
 body {
-  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
-  background-color: #000;
+  font-family: 'Source Sans Pro', sans-serif;
   color: #fff;
-  line-height: 1.5;
+  background-color: #000;
+  line-height: 1.6;
 }
 
 .container {
@@ -32,15 +32,55 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .logo {
   height: 30px;
 }
 
+
+.nav-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.4s ease-in-out;
+  transform-origin: center;
+}
+
+.nav-toggle:checked + .hamburger span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav-toggle:checked + .hamburger span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle:checked + .hamburger span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+
 .nav {
   display: flex;
   align-items: center;
+  width: 100%;
+  justify-content: flex-end;
 }
 
 .nav-links {
@@ -56,10 +96,8 @@ body {
   font-size: 12px;
 }
 
-.menu-icon {
-  display: none;
-  height: 20px;
-  margin-left: 20px;
+.nav-toggle:checked ~ .nav .nav-links {
+  display: flex;
 }
 
 
@@ -80,9 +118,9 @@ body {
   font-size: 16px;
   font-weight: bold;
   color: white;
-  border-radius: 5px;
   cursor: pointer;
   transition: opacity 0.3s ease;
+  border-radius: 5px;
 }
 
 .hero button:hover,
@@ -181,7 +219,29 @@ body {
 
 
 @media screen and (max-width: 768px) {
-  .icon-cards,
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #071629;
+    padding: 20px 0;
+    gap: 20px;
+    margin-top: 15px;
+    border-radius: 5px;
+  }
+
+  .nav-links li {
+    text-align: center;
+  }
+
+  .header-container {
+    flex-wrap: wrap;
+  }
+
   .stats {
     flex-direction: column;
     align-items: center;
@@ -195,14 +255,11 @@ body {
 @media screen and (max-width: 480px) {
   .header {
     background-image: url('images/headphones_hero_2.jpg');
+    padding: 60px 20px;
   }
 
-  .nav-links {
-    display: none;
-  }
-
-  .menu-icon {
-    display: block;
+  .header-container {
+    flex-direction: row-reverse;
   }
 
   .hero h1 {
@@ -216,5 +273,10 @@ body {
   .hero button {
     font-size: 14px;
     padding: 12px 24px;
+  }
+
+  .icon-card {
+    width: 100%;
+    max-width: 300px;
   }
 }
