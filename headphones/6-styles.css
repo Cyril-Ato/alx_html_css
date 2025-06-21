@@ -7,15 +7,16 @@
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
-  color: #fff;
   background-color: #000;
+  color: #fff;
   line-height: 1.6;
 }
 
 .container {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 60px 20px;
+  text-align: center;
 }
 
 
@@ -23,9 +24,7 @@ body {
   background-image: url('images/headphones_hero_1.jpg');
   background-size: cover;
   background-position: center;
-  padding: 40px 0 100px;
-  text-align: center;
-  position: relative;
+  padding: 60px 20px;
 }
 
 .header-container {
@@ -38,7 +37,6 @@ body {
 .logo {
   height: 30px;
 }
-
 
 .nav-toggle {
   display: none;
@@ -87,15 +85,12 @@ body {
 .nav-toggle:checked + .hamburger span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
-
 .nav-toggle:checked + .hamburger span:nth-child(2) {
   opacity: 0;
 }
-
 .nav-toggle:checked + .hamburger span:nth-child(3) {
   transform: rotate(-45deg) translate(6px, -6px);
 }
-
 .nav-toggle:checked ~ .nav .nav-links {
   display: flex;
 }
@@ -105,72 +100,22 @@ body {
   font-size: 32px;
   margin-bottom: 20px;
 }
-
 .hero p {
   font-size: 18px;
   margin-bottom: 30px;
 }
-
 .hero button {
   background-color: #FF6565;
-  border: none;
+  color: white;
   padding: 15px 30px;
+  border: none;
   font-size: 16px;
   font-weight: bold;
-  color: white;
   cursor: pointer;
-  transition: opacity 0.3s ease;
   border-radius: 5px;
 }
-
-.hero button:hover,
-.hero button:active {
+.hero button:hover {
   opacity: 0.9;
-}
-
-
-.services {
-  background-color: #fff;
-  color: #071629;
-  text-align: center;
-  padding: 80px 20px;
-}
-
-.services h2 {
-  font-size: 32px;
-  margin-bottom: 50px;
-  font-weight: 700;
-}
-
-.icon-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-}
-
-.icon-card {
-  max-width: 200px;
-  padding: 20px;
-}
-
-.icon {
-  font-size: 50px;
-  color: #FF6565;
-  margin-bottom: 20px;
-  display: inline-block;
-}
-
-.icon-card h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
-  font-weight: 600;
-}
-
-.icon-card p {
-  font-size: 14px;
-  color: #333;
-  line-height: 1.5;
 }
 
 
@@ -191,7 +136,7 @@ body {
   max-width: 700px;
   margin: 0 auto 60px;
   font-size: 16px;
-  line-height: 1.6;
+  color: #ccc;
 }
 
 .stats {
@@ -203,89 +148,41 @@ body {
 
 .stat {
   width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.stat h3 {
-  font-size: 36px;
+.pentagon {
+  width: 120px;
+  height: 120px;
+  background-color: #FF6565;
+  color: white;
+  font-size: 20px;
   font-weight: 700;
-  color: #FF6565;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  transition: transform 0.3s ease, background-color 0.3s ease;
   margin-bottom: 10px;
+}
+.pentagon:hover {
+  transform: scale(1.1);
+  background-color: #e24a4a;
 }
 
 .stat p {
   font-size: 14px;
-  color: #ffffff;
-}
-
-
-.contact {
-  background-color: #fff;
-  color: #071629;
-  padding: 80px 20px;
-  text-align: center;
-}
-
-.contact h2 {
-  font-size: 32px;
-  margin-bottom: 40px;
-  font-weight: 700;
-}
-
-.contact-form {
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-.form-group {
-  margin-bottom: 20px;
-}
-
-.contact-form label {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 12px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  font-family: inherit;
-  font-size: 16px;
-  background-color: #f9f9f9;
-}
-
-.contact-form textarea {
-  resize: vertical;
-}
-
-.contact-form button {
-  background-color: #FF6565;
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 14px 28px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: opacity 0.3s ease;
-}
-
-.contact-form button:hover {
-  opacity: 0.9;
+  color: #ccc;
 }
 
 
 .footer {
   background-color: #071629;
-  color: #fff;
   padding: 40px 20px;
   text-align: center;
 }
-
 .footer-container {
   max-width: 1000px;
   margin: 0 auto;
@@ -294,30 +191,21 @@ body {
   align-items: center;
   flex-wrap: wrap;
 }
-
 .footer-logo {
   height: 30px;
-  margin-bottom: 10px;
 }
-
 .social-icons {
   display: flex;
   gap: 20px;
-  justify-content: center;
-  align-items: center;
 }
-
 .social-icons a {
   color: white;
   font-size: 24px;
   text-decoration: none;
-  transition: opacity 0.3s ease;
 }
-
 .social-icons a:hover {
   opacity: 0.8;
 }
-
 .footer-text {
   margin-top: 20px;
   font-size: 14px;
@@ -345,56 +233,17 @@ body {
     text-align: center;
   }
 
-  .header-container {
-    flex-wrap: wrap;
+  .stats {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat {
+    margin-bottom: 30px;
   }
 
   .footer-container {
     flex-direction: column;
-    text-align: center;
     gap: 15px;
-  }
-
-  .footer-logo {
-    margin-bottom: 0;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .header {
-    background-image: url('images/headphones_hero_2.jpg');
-    padding: 60px 20px;
-  }
-
-  .header-container {
-    flex-direction: row-reverse;
-  }
-
-  .hero h1 {
-    font-size: 24px;
-  }
-
-  .hero p {
-    font-size: 16px;
-  }
-
-  .hero button {
-    font-size: 14px;
-    padding: 12px 24px;
-  }
-
-  .icon-card {
-    width: 100%;
-    max-width: 300px;
-  }
-
-  .contact-form input,
-  .contact-form textarea {
-    font-size: 14px;
-  }
-
-  .contact-form button {
-    font-size: 14px;
-    padding: 12px 20px;
   }
 }
