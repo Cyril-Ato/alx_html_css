@@ -40,31 +40,6 @@ body {
 }
 
 
-.nav-toggle {
-  display: none;
-}
-
-
-.hamburger {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 21px;
-  cursor: pointer;
-  z-index: 1000;
-}
-
-.hamburger span {
-  height: 3px;
-  width: 100%;
-  background-color: white;
-  border-radius: 2px;
-  transition: all 0.4s ease-in-out;
-  transform-origin: center;
-}
-
-
 .nav {
   display: flex;
   align-items: center;
@@ -86,6 +61,29 @@ body {
 }
 
 
+.nav-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.4s ease-in-out;
+  transform-origin: center;
+}
+
 .nav-toggle:checked + .hamburger span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
@@ -98,7 +96,6 @@ body {
   transform: rotate(-45deg) translate(6px, -6px);
 }
 
- 
 .nav-toggle:checked ~ .nav .nav-links {
   display: flex;
 }
@@ -155,7 +152,13 @@ body {
 .icon-card {
   max-width: 200px;
   padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* .icon-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+} */
 
 .icon {
   font-size: 50px;
@@ -207,9 +210,11 @@ body {
     background-image: url('images/headphones_hero_2.jpg');
     padding: 60px 20px;
   }
-  .header-container{
+
+  .header-container {
     flex-direction: row-reverse;
   }
+
   .hero h1 {
     font-size: 24px;
   }

@@ -39,6 +39,25 @@ body {
   height: 30px;
 }
 
+.nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 12px;
+}
 
 .nav-toggle {
   display: none;
@@ -73,27 +92,6 @@ body {
 
 .nav-toggle:checked + .hamburger span:nth-child(3) {
   transform: rotate(-45deg) translate(6px, -6px);
-}
-
-
-.nav {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  justify-content: flex-end;
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 30px;
-}
-
-.nav-links li a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: 600;
-  font-size: 12px;
 }
 
 .nav-toggle:checked ~ .nav .nav-links {

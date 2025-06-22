@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Headphones Landing Page</title>
   <link rel="stylesheet" href="4-styles.css" />
-  <link rel="stylesheet" href="styles/holberton_school-icon.css" />
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="holberton_school-icon/style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -48,17 +48,17 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
         <div class="icon-card">
-          <i class="holberton_school-icon-ic_music icon"></i>
+          <i class="holberton_school-icon-ic_video icon"></i>
           <h3>Music Control</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
         <div class="icon-card">
-          <i class="holberton_school-icon-ic_hearing icon"></i>
+          <i class="holberton_school-icon-ic_music icon"></i>
           <h3>Comfort Fit</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
         <div class="icon-card">
-          <i class="holberton_school-icon-ic_headphones icon"></i>
+          <i class="holberton_school-icon-ic_hearing icon"></i>
           <h3>Wireless Freedom</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
@@ -71,21 +71,21 @@
       <h2>Our results speak for themselves</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis pulvinar vestibulum.</p>
 
-      <div class="stats">
-        <div class="stat">
-          <h3>+2M</h3>
+      <div class="pentagon-stats">
+        <div class="pentagon-wrapper">
+          <div class="pentagon">+2M</div>
           <p>Users</p>
         </div>
-        <div class="stat">
-          <h3>+98%</h3>
+        <div class="pentagon-wrapper">
+          <div class="pentagon">+98%</div>
           <p>Satisfaction</p>
         </div>
-        <div class="stat">
-          <h3>24/7</h3>
+        <div class="pentagon-wrapper">
+          <div class="pentagon">24/7</div>
           <p>Support</p>
         </div>
-        <div class="stat">
-          <h3>100+</h3>
+        <div class="pentagon-wrapper">
+          <div class="pentagon">100+</div>
           <p>Countries</p>
         </div>
       </div>
@@ -93,39 +93,28 @@
   </section>
 
   <section class="contact">
-    <div class="container">
-      <h2>Contact Us</h2>
-      <form class="contact-form">
-        <div class="form-group">
-          <label for="name">Full Name</label>
-          <input type="text" id="name" name="name" placeholder="Your name" required />
-        </div>
+  <div class="container">
+    <h2>Contact Us</h2>
+    <form action="#" method="post" class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
 
-        <div class="form-group">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" placeholder="Your email" required />
-        </div>
-
-        <div class="form-group">
-          <label for="message">Your Message</label>
-          <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
-        </div>
-
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
-  </section>
 
   <footer class="footer">
-    <div class="container footer-container">
-      <img src="images/logo_headphones.png" alt="Footer Logo" class="footer-logo" />
-      <div class="social-icons">
-        <a href="https://facebook.com" target="_blank"><i class="holberton_school-icon-ic_facebook"></i></a>
-        <a href="https://linkedin.com" target="_blank"><i class="holberton_school-icon-ic_linkedin"></i></a>
-        <a href="https://instagram.com" target="_blank"><i class="holberton_school-icon-ic_instagram"></i></a>
+    <div class="footer-container">
+      <img src="images/logo_headphones.png" alt="Headphones Logo" class="footer-logo" />
+      <div class="footer-icons">
+        <i class="holberton_school-icon-ic_facebook"></i>
+        <i class="holberton_school-icon-ic_linkedin"></i>
+        <i class="holberton_school-icon-ic_instagram"></i>
       </div>
+      <p>&copy; 2025 Headphones Inc. All rights reserved.</p>
     </div>
-    <p class="footer-text">© 2024 Headphones. All rights reserved.</p>
   </footer>
 
 </body>

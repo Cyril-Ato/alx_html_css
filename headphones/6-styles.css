@@ -15,8 +15,7 @@ body {
 .container {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 60px 20px;
-  text-align: center;
+  padding: 0 20px;
 }
 
 
@@ -24,7 +23,9 @@ body {
   background-image: url('images/headphones_hero_1.jpg');
   background-size: cover;
   background-position: center;
-  padding: 60px 20px;
+  padding: 40px 0 100px;
+  text-align: center;
+  position: relative;
 }
 
 .header-container {
@@ -37,6 +38,7 @@ body {
 .logo {
   height: 30px;
 }
+
 
 .nav-toggle {
   display: none;
@@ -61,27 +63,6 @@ body {
   transform-origin: center;
 }
 
-.nav {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  justify-content: flex-end;
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 30px;
-}
-
-.nav-links li a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: 600;
-  font-size: 12px;
-}
-
-
 .nav-toggle:checked + .hamburger span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
@@ -96,6 +77,25 @@ body {
 }
 
 
+.nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-end;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+
 .hero h1 {
   font-size: 32px;
   margin-bottom: 20px;
@@ -106,16 +106,60 @@ body {
 }
 .hero button {
   background-color: #FF6565;
-  color: white;
-  padding: 15px 30px;
   border: none;
+  padding: 15px 30px;
   font-size: 16px;
   font-weight: bold;
+  color: white;
   cursor: pointer;
+  transition: opacity 0.3s ease;
   border-radius: 5px;
 }
 .hero button:hover {
   opacity: 0.9;
+}
+
+
+.services {
+  background-color: #fff;
+  color: #071629;
+  text-align: center;
+  padding: 80px 20px;
+}
+.services h2 {
+  font-size: 32px;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+.icon-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+.icon-card {
+  max-width: 200px;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+.icon-card:hover {
+  transform: scale(1.05);
+}
+.icon {
+  font-size: 50px;
+  color: #FF6565;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+.icon-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.icon-card p {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
 }
 
 
@@ -125,71 +169,98 @@ body {
   text-align: center;
   padding: 80px 20px;
 }
-
 .results h2 {
   font-size: 32px;
   margin-bottom: 20px;
-  font-weight: 700;
 }
-
 .results p {
   max-width: 700px;
   margin: 0 auto 60px;
   font-size: 16px;
-  color: #ccc;
+  line-height: 1.6;
 }
-
-.stats {
+.pentagon-stats {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   gap: 40px;
+  flex-wrap: wrap;
 }
-
-.stat {
-  width: 180px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.pentagon-wrapper {
+  text-align: center;
 }
-
 .pentagon {
-  width: 120px;
-  height: 120px;
-  background-color: #FF6565;
-  color: white;
-  font-size: 20px;
-  font-weight: 700;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 60px;
+  height: 60px;
+  background: #FF6565;
   clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  margin-bottom: 10px;
+  margin: 0 auto 10px;
 }
-.pentagon:hover {
-  transform: scale(1.1);
-  background-color: #e24a4a;
+.pentagon-wrapper h3 {
+  font-size: 20px;
+  color: #FF6565;
+  margin-bottom: 5px;
+}
+.pentagon-wrapper p {
+  font-size: 14px;
+  color: #fff;
 }
 
-.stat p {
-  font-size: 14px;
-  color: #ccc;
+
+.contact {
+  background-color: #fff;
+  color: #071629;
+  padding: 80px 20px;
+  text-align: center;
+}
+.contact h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  border-radius: 5px;
+  font-family: inherit;
+}
+.contact-form button {
+  background-color: #FF6565;
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.contact-form button:hover {
+  opacity: 0.9;
 }
 
 
 .footer {
   background-color: #071629;
-  padding: 40px 20px;
+  color: #fff;
+  padding: 40px 20px 20px;
   text-align: center;
 }
 .footer-container {
-  max-width: 1000px;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  gap: 20px;
 }
 .footer-logo {
   height: 30px;
@@ -197,16 +268,17 @@ body {
 .social-icons {
   display: flex;
   gap: 20px;
-}
-.social-icons a {
-  color: white;
   font-size: 24px;
-  text-decoration: none;
 }
-.social-icons a:hover {
-  opacity: 0.8;
+.social-icons i {
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
-.footer-text {
+.social-icons i:hover {
+  transform: scale(1.2);
+}
+.footer-copy {
   margin-top: 20px;
   font-size: 14px;
   color: #ccc;
@@ -217,7 +289,6 @@ body {
   .hamburger {
     display: flex;
   }
-
   .nav-links {
     display: none;
     flex-direction: column;
@@ -228,22 +299,42 @@ body {
     margin-top: 15px;
     border-radius: 5px;
   }
-
   .nav-links li {
     text-align: center;
   }
-
-  .stats {
+  .header-container {
+    flex-wrap: wrap;
+  }
+  .icon-cards {
     flex-direction: column;
     align-items: center;
   }
-
-  .stat {
-    margin-bottom: 30px;
-  }
-
-  .footer-container {
+  .pentagon-stats {
     flex-direction: column;
-    gap: 15px;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    background-image: url('images/headphones_hero_2.jpg');
+    padding: 60px 20px;
+  }
+  .header-container {
+    flex-direction: row-reverse;
+  }
+  .hero h1 {
+    font-size: 24px;
+  }
+  .hero p {
+    font-size: 16px;
+  }
+  .hero button {
+    font-size: 14px;
+    padding: 12px 24px;
+  }
+  .icon-card {
+    width: 100%;
+    max-width: 300px;
   }
 }
