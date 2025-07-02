@@ -11,7 +11,6 @@ body {
   line-height: 1.6;
 }
 
-
 header {
   padding: 20px 60px;
   background-color: transparent;
@@ -35,7 +34,6 @@ nav ul li a {
   font-size: 12px;
   font-weight: bold;
 }
-
 
 .hero {
   background-image: url('https://images.pexels.com/photos/207983/pexels-photo-207983.jpeg');
@@ -76,7 +74,6 @@ nav ul li a {
 .hero button:hover {
   background-color: #a150dd;
 }
-
 
 .videos {
   background-color: #fff;
@@ -145,6 +142,63 @@ nav ul li a {
   margin-bottom: 5px;
 }
 
+.membership {
+  background-color: #fff;
+  color: #071629;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.membership h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #071629;
+}
+
+.membership-features {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.feature {
+  max-width: 200px;
+  text-align: center;
+}
+
+.feature img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 15px;
+}
+
+.feature h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.feature p {
+  font-size: 14px;
+  color: #444;
+}
+
+.membership-btn {
+  background-color: #c271ff;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.membership-btn:hover {
+  background-color: #a150dd;
+}
 
 .quote-section {
   background-color: #c271ff;
@@ -199,7 +253,6 @@ nav ul li a {
   color: #f1f1f1;
 }
 
-
 footer {
   background-color: #000;
   color: #fff;
@@ -231,7 +284,6 @@ footer p {
   color: #ccc;
 }
 
-
 @media screen and (max-width: 768px) {
   nav ul {
     flex-direction: column;
@@ -240,8 +292,9 @@ footer p {
 
   .video-list,
   .quotes-container,
+  .membership-features,
   .footer-top {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
   }
 }
